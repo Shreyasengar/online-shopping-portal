@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Online Shopping Portal</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="imgs/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/ebooks.css" />
+    <link rel="stylesheet" type="text/css" href="css/nav.css" />
+    <script type="text/javascript" src="js/ebooksfilter.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="hleft">
+        <img src="imgs/logo.png" />
+      </div>
+      <div class="hright">
+        <h1>Hop n Shop</h1>
+        <h3>Online Shopping Portal</h3>
+      </div>
+      <div class="hrest">
+        <marquee>
+          Upto 45% off on electronics from 10th November to 13th November &nbsp;
+          * &nbsp; Latest Clothing Fashion Available for Diwali &nbsp; * &nbsp;
+          Over 10,000 new E-books available for you!</marquee
+        >
+      </div>
+    </header>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="index">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li><a href="electronics">Electronics</a></li>
+            <li><a href="clothing">Clothing</a></li>
+            <li><a href="#" class="active">E-books</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="cart"
+                ><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a
+              >
+            </li>
+            <li>
+              <a href="/"
+                ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+              >
+            </li>
+            <li>
+              <a href="login"
+                ><span class="glyphicon glyphicon-log-in"></span> Login</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+
+    <section class="left">
+      <span id="timeline">Filters</span>
+      <hr />
+      <ul>
+        <li style="list-style: none">
+          <details>
+            <summary>Sort By Price</summary>
+            <ul>
+              <li>
+                <span class="filterlink" onclick="lowtohigh()">
+                  Low to High
+                </span>
+              </li>
+              <li>
+                <span class="filterlink" onclick="hightolow()">
+                  High to Low
+                </span>
+              </li>
+              <li>
+                <span class="filterlink" onclick="allitems()">
+                  Sort by Popularity
+                </span>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li style="list-style: none">
+          <details>
+            <summary>Categories</summary>
+            <ul>
+              <li>
+                <span class="filterlink" onclick="philo()">
+                  Philosophical Fiction
+                </span>
+              </li>
+              <li>
+                <span class="filterlink" onclick="mystery()">
+                  Mystery & Crime</span
+                >
+              </li>
+              <li>
+                <span class="filterlink" onclick="drama()">
+                  Drama & Fantasy Fiction
+                </span>
+              </li>
+              <li>
+                <span class="filterlink" onclick="romance()">
+                  Romance Novel
+                </span>
+              </li>
+              <li>
+                <span class="filterlink" onclick="allitems()"> All </span>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+
+      <br />
+      <br />
+      <br />
+      <span id="timeline">Catagories</span>
+      <hr />
+      <ul>
+        <li><a href="electronics" class="links"> Electronics </a></li>
+        <li><a href="clothing" class="links"> Clothing </a></li>
+        <li><a href="#" class="links"> E-Books </a></li>
+      </ul>
+      <br />
+      <br />
+      <br />
+      <span id="timeline">Your Account</span>
+      <hr />
+      <ul>
+        <li><a href="" class="links"> Wishlist </a></li>
+        <li><a href="" class="links"> Order History </a></li>
+        <li><a href="" class="links"> Track Order </a></li>
+      </ul>
+    </section>
+    <section class="right">
+      <h2>E-Books</h2>
+      <hr />
+      <div class="products">
+        <div class="item philo">
+          <center><img src="imgs/ebooks/book1.jpg" /></center>
+          <p>Tuesdays with Morrie</p>
+          <p class="price">&#8377; 800</p>
+          <p class="quantity" id="301">
+            <button
+              class="minus"
+              onclick="subtract('add301','301','number301')"
+            >
+              -
+            </button>
+            <span class="number" id="number301"></span>
+            <button class="plus" onclick="addition('number301')">+</button>
+		  </p>
+		  <form action="/ebooks" method="POST">
+          <p><button class="add" id="add301" type="submit" value="b001" name="itemid">Add to Cart</button></p>
+        </div>
+        <div class="item philo">
+          <center><img src="imgs/ebooks/book2.jpg" /></center>
+          <p>A Man Called Ove</p>
+          <p class="price">&#8377; 1000</p>
+          <p class="quantity" id="302">
+            <button
+              class="minus"
+              onclick="subtract('add302','302','number302')"
+            >
+              -
+            </button>
+            <span class="number" id="number302"></span>
+            <button class="plus" onclick="addition('number302')">+</button>
+          </p>
+          <p><button class="add" id="add302" type="submit" value="b002" name="itemid">Add to Cart</button></p>
+        </div>
+        <div class="item mystery">
+          <center><img src="imgs/ebooks/book3.jpg" /></center>
+          <p>The Da Vinci Code</p>
+          <p class="price">&#8377; 1500</p>
+          <p class="quantity" id="303">
+            <button
+              class="minus"
+              onclick="subtract('add303','303','number303')"
+            >
+              -
+            </button>
+            <span class="number" id="number303"></span>
+            <button class="plus" onclick="addition('number303')">+</button>
+          </p>
+          <p><button class="add" id="add303" type="submit" value="b003" name="itemid">Add to Cart</button></p>
+        </div>
+        <div class="item drama">
+          <center><img src="imgs/ebooks/book4.jpg" /></center>
+          <p>The Alchemist</p>
+          <p class="price">&#8377; 950</p>
+          <p class="quantity" id="304">
+            <button
+              class="minus"
+              onclick="subtract('add304','304','number304')"
+            >
+              -
+            </button>
+            <span class="number" id="number304"></span>
+            <button class="plus" onclick="addition('number304')">+</button>
+          </p>
+          <p><button class="add" id="add304" type="submit" value="b004" name="itemid">Add to Cart</button></p>
+        </div>
+        <div class="item mystery">
+          <center><img src="imgs/ebooks/book5.jpg" /></center>
+          <p>Death on the Nile</p>
+          <p class="price">&#8377; 1100</p>
+          <p class="quantity" id="305">
+            <button
+              class="minus"
+              onclick="subtract('add305','305','number305')"
+            >
+              -
+            </button>
+            <span class="number" id="number305"></span>
+            <button class="plus" onclick="addition('number305')">+</button>
+          </p>
+          <p><button class="add" id="add305" type="submit" value="b005" name="itemid">Add to Cart</button></p>
+        </div>
+        <div class="item romance">
+          <center><img src="imgs/ebooks/book6.jpg" /></center>
+          <p>Pride & Prejudice</p>
+          <p class="price">&#8377; 1600</p>
+          <p class="quantity" id="306">
+            <button
+              class="minus"
+              onclick="subtract('add306','306','number306')"
+            >
+              -
+            </button>
+            <span class="number" id="number306"></span>
+            <button class="plus" onclick="addition('number306')">+</button>
+          </p>
+		  <p><button class="add" id="add306" type="submit" value="b006" name="itemid">Add to Cart</button></p>
+		</form>
+        </div>
+      </div>
+      <br />
+    </section>
+    <footer>
+      <section class="ft" id="shreya">
+        <h2>Shreya Sengar</h2>
+        <p>
+          201800510 <br />
+          Roll. No. 41 <br />
+          Section: C
+        </p>
+      </section>
+      <section class="ft" id="jaskaran">
+        <h2>Jaskaran Reen</h2>
+        <p>
+          201800536 <br />
+          Roll. No. 44 <br />
+          Section: C
+        </p>
+      </section>
+      <section class="ft" id="prajakta">
+        <h2>Prajakta Ghorpade</h2>
+        <p>
+          201800541 <br />
+          Roll. No. 45 <br />
+          Section: C
+        </p>
+      </section>
+      <section class="ft" id="lush">
+        <h2>Lush Gulati</h2>
+        <p>
+          201800609 <br />
+          Roll. No. 55 <br />
+          Section: C
+        </p>
+      </section>
+    </footer>
+  </body>
+</html>

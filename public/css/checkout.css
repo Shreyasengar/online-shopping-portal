@@ -1,0 +1,182 @@
+body{
+	margin-right: 0px;
+	background:url('https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+header{
+	background: #e8ded2;
+	width: 100%;
+	height: 33vh;
+}
+header h1,h3{
+	color: #056676;
+	font-family:'Dancing Script', cursive;
+    font-size: 5em;
+    margin-top: 0;
+}
+header h1{
+    padding-top: 2vh;
+}
+header h3{
+    font-size: 1.7em;
+}
+header marquee{
+	color: #5eaaa8;
+	font-family: 'Dosis', sans-serif;
+    font-size: 1.3em;
+    font-weight: 800;
+}
+.hleft{
+	display: inline-block;
+    float: left;
+    margin-left: 28%;
+    margin-right: 6vw;
+}
+.hleft img{
+	width: 10vw;
+	height: 23vh;
+}
+.hrest{
+	clear: both;
+}
+.abc{
+	margin-bottom: 5%;
+}
+
+.screen{
+	width: 70%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    display: block;
+}
+.orderplaced{
+	width: 70%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: #f0f5ff;
+    padding: 5%;
+    text-align: center;
+    display: none;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 20px;
+  color: white;
+  font-size: 1.2em;
+}
+.containerTab h2{
+	visibility: hidden;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#b2{
+	display: none;
+}
+.cod, #b1{
+    background: #f0f5ff;
+    color: black;
+}
+.card, #b2{
+	background: #056676;
+}
+.closebtn {
+  float: right;
+  font-size: 35px;
+  cursor: pointer;
+}
+.bill{
+	margin-top: 6%;
+	width: 60%;
+	font-size: 1.3em;
+	background: white;
+}
+.bill tr td, th{
+	padding: 2%;
+	border-bottom: 1px solid #bbc3d5;
+}
+.b2{
+	color: black;
+	margin-bottom: 8%;
+}
+.placeorder{
+	padding: 2% 5%;
+    background-color: #056676;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    border-radius: 20px;
+    font-weight: 900;
+}
+.placeorder:hover{
+	background-color: #ffffff;
+    color: black;
+}
+.carddetails input{
+	width: 250px;
+	color: black;
+}
+.carddetails{
+	margin-left: 30%;
+	font-size: 1.2em;
+}
+.p2{
+	background-color: white;
+    color: black;
+}
+.p2:hover{
+	background-color: #e2eafa;
+}
+.back{
+	text-align: center;
+	font-size: 1.1em;
+	margin-bottom: 4%;
+}
+.back a{
+	color: white;
+}
+.b1 a{
+	color: black;
+}
+footer{
+	clear: both;
+	background: #344f60;
+	padding: 3%;
+	padding-left: 8%;
+	color: #e2ebfe;
+	height: 40vh;
+	margin-top: 5%;
+}
+footer h2{
+	color: #ffffff;
+	font-family: 'Dosis', sans-serif;
+	margin-bottom: 8%;
+}
+footer a{
+	color: #d6d6d6;
+}
+.ft{
+	width: 25%;
+	display: inline-block;
+	float: left;
+}
+.ft p{
+	font-size: 1.2em;
+}

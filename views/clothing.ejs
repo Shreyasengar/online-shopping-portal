@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Online Shopping Portal</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="imgs/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/clothing.css" />
+    <link rel="stylesheet" type="text/css" href="css/nav.css" />
+    <script type="text/javascript" src="js/clothingfilter.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="hleft">
+        <img src="imgs/logo.png" />
+      </div>
+      <div class="hright">
+        <h1>Hop n Shop</h1>
+        <h3>Online Shopping Portal</h3>
+      </div>
+      <div class="hrest">
+        <marquee>
+          Upto 45% off on electronics from 10th November to 13th November &nbsp;
+          * &nbsp; Latest Clothing Fashion Available for Diwali &nbsp; * &nbsp;
+          Over 10,000 new E-books available for you!</marquee
+        >
+      </div>
+    </header>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="index">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li><a href="electronics">Electronics</a></li>
+            <li><a href="#" class="active">Clothing</a></li>
+            <li><a href="ebooks">E-books</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="cart"
+                ><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a
+              >
+            </li>
+            <li>
+              <a href="/"
+                ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+              >
+            </li>
+            <li>
+              <a href="login"
+                ><span class="glyphicon glyphicon-log-in"></span> Login</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+
+    <section class="left">
+      <span id="timeline">Filters</span>
+      <hr />
+      <ul>
+        <li style="list-style: none">
+          <details>
+            <summary>Sort By Price</summary>
+            <ul>
+              <li>
+                <span class="filterlink" onclick="lowtohigh()">
+                  Low to High
+                </span>
+              </li>
+              <li>
+                <span class="filterlink" onclick="hightolow()">
+                  High to Low
+                </span>
+              </li>
+              <li>
+                <span class="filterlink" onclick="allitems()">
+                  Sort by Popularity
+                </span>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li style="list-style: none">
+          <details>
+            <summary>Gender</summary>
+            <ul>
+              <li>
+                <span class="filterlink" onclick="female()"> Female </span>
+              </li>
+              <li><span class="filterlink" onclick="male()"> Male </span></li>
+              <li>
+                <span class="filterlink" onclick="allitems()"> All </span>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li style="list-style: none">
+          <details>
+            <summary>Clothing Category</summary>
+            <ul>
+              <li>
+                <span class="filterlink" onclick="tops()"> Tops & Shirts </span>
+              </li>
+              <li>
+                <span class="filterlink" onclick="jacket()"> Jackets </span>
+              </li>
+              <li>
+                <span class="filterlink" onclick="sweater()">
+                  Sweaters & Hoodies
+                </span>
+              </li>
+              <li>
+                <span class="filterlink" onclick="pant()">
+                  Jeans & Leggings
+                </span>
+              </li>
+              <li>
+                <span class="filterlink" onclick="allitems()"> All </span>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+
+      <br />
+      <br />
+      <br />
+
+      <span id="timeline">Catagories</span>
+      <hr />
+      <ul>
+        <li><a href="electronics" class="links"> Electronics </a></li>
+        <li><a href="#" class="links"> Clothing </a></li>
+        <li><a href="ebooks" class="links"> E-Books </a></li>
+      </ul>
+
+      <br />
+      <br />
+      <br />
+
+      <span id="timeline">Your Account</span>
+      <hr />
+      <ul>
+        <li><a href="" class="links"> Wishlist </a></li>
+        <li><a href="" class="links"> Order History </a></li>
+        <li><a href="" class="links"> Track Order </a></li>
+      </ul>
+    </section>
+    <section class="right">
+      <h2>Clothing</h2>
+      <hr />
+      <div class="products">
+        <div class="item women top">
+          <center><img src="imgs/clothing/top1.png" /></center>
+          <p>Pastel Blue Bishop Sleeves Top</p>
+          <p class="price">&#8377; 1,000</p>
+          <p class="quantity" id="201">
+            <button
+              class="minus"
+              onclick="subtract('add201','201','number201')"
+            >
+              -
+            </button>
+            <span class="number" id="number201"></span>
+            <button class="plus" onclick="addition('number201')">+</button>
+		  </p>
+		  <form action="/clothing" method="post">
+          <p><button class="add" id="add201" type="submit" value="c001" name="itemid">Add to Cart</button></p>
+        </div>
+        <div class="item men top">
+          <center><img src="imgs/clothing/top2.jpg" /></center>
+          <p>Vertical Stripes Men's Shirt</p>
+          <p class="price">&#8377; 1,200</p>
+          <p class="quantity" id="202">
+            <button
+              class="minus"
+              onclick="subtract('add202','202','number202')"
+            >
+              -
+            </button>
+            <span class="number" id="number202"></span>
+            <button class="plus" onclick="addition('number202')">+</button>
+          </p>
+          <p><button class="add" id="add202" type="submit" value="c002" name="itemid">Add to Cart</button></p>
+        </div>
+        <div class="item women sweater">
+          <center><img src="imgs/clothing/top3.jpg" /></center>
+          <p>Knitted Beige Turtleneck</p>
+          <p class="price">&#8377; 1,800</p>
+          <p class="quantity" id="203">
+            <button
+              class="minus"
+              onclick="subtract('add203','203','number203')"
+            >
+              -
+            </button>
+            <span class="number" id="number203"></span>
+            <button class="plus" onclick="addition('number203')">+</button>
+          </p>
+          <p><button class="add" id="add203" type="submit" value="c003" name="itemid">Add to Cart</button></p>
+        </div>
+        <div class="item men sweater">
+          <center><img src="imgs/clothing/top4.png" /></center>
+          <p>Pastel Sea Green Sweatshirt</p>
+          <p class="price">&#8377; 1,100</p>
+          <p class="quantity" id="204">
+            <button
+              class="minus"
+              onclick="subtract('add204','204','number204')"
+            >
+              -
+            </button>
+            <span class="number" id="number204"></span>
+            <button class="plus" onclick="addition('number204')">+</button>
+          </p>
+          <p><button class="add" id="add204" type="submit" value="c004" name="itemid">Add to Cart</button></p>
+        </div>
+        <div class="item women jacket">
+          <center><img src="imgs/clothing/jacket1.jpg" /></center>
+          <p>Black Leather Jacket</p>
+          <p class="price">&#8377; 3,200</p>
+          <p class="quantity" id="205">
+            <button
+              class="minus"
+              onclick="subtract('add205','205','number205')"
+            >
+              -
+            </button>
+            <span class="number" id="number205"></span>
+            <button class="plus" onclick="addition('number205')">+</button>
+          </p>
+          <p><button class="add" id="add205" type="submit" value="c005" name="itemid">Add to Cart</button></p>
+        </div>
+        <div class="item men jacket">
+          <center><img src="imgs/clothing/jacket2.jpg" /></center>
+          <p>Brown Bomber Jacket</p>
+          <p class="price">&#8377; 2,800</p>
+          <p class="quantity" id="206">
+            <button
+              class="minus"
+              onclick="subtract('add206','206','number206')"
+            >
+              -
+            </button>
+            <span class="number" id="number206"></span>
+            <button class="plus" onclick="addition('number206')">+</button>
+          </p>
+          <p><button class="add" id="add206" type="submit" value="c006" name="itemid">Add to Cart</button></p>
+        </div>
+        <div class="item women jacket">
+          <center><img src="imgs/clothing/jacket3.jpg" /></center>
+          <p>Jean Jacket with Fur</p>
+          <p class="price">&#8377; 2,000</p>
+          <p class="quantity" id="207">
+            <button
+              class="minus"
+              onclick="subtract('add207','207','number207')"
+            >
+              -
+            </button>
+            <span class="number" id="number207"></span>
+            <button class="plus" onclick="addition('number207')">+</button>
+          </p>
+          <p><button class="add" id="add207" type="submit" value="c007" name="itemid">Add to Cart</button></p>
+        </div>
+        <div class="item women pant">
+          <center><img src="imgs/clothing/pant1.jpg" /></center>
+          <p>Side Striped Black Leggings</p>
+          <p class="price">&#8377; 900</p>
+          <p class="quantity" id="208">
+            <button
+              class="minus"
+              onclick="subtract('add208','208','number208')"
+            >
+              -
+            </button>
+            <span class="number" id="number208"></span>
+            <button class="plus" onclick="addition('number208')">+</button>
+          </p>
+          <p><button class="add" id="add208" type="submit" value="c008" name="itemid">Add to Cart</button></p>
+        </div>
+        <div class="item women pant">
+          <center><img src="imgs/clothing/pant2.jpg" /></center>
+          <p>Flared Blue Jeans</p>
+          <p class="price">&#8377; 1,500</p>
+          <p class="quantity" id="209">
+            <button
+              class="minus"
+              onclick="subtract('add209','209','number209')"
+            >
+              -
+            </button>
+            <span class="number" id="number209"></span>
+            <button class="plus" onclick="addition('number209')">+</button>
+          </p>
+		  <p><button class="add" id="add209" type="submit" value="c009" name="itemid">Add to Cart</button></p>
+		</form>
+        </div>
+      </div>
+      <br />
+    </section>
+    <footer>
+      <section class="ft" id="shreya">
+        <h2>Shreya Sengar</h2>
+        <p>
+          201800510 <br />
+          Roll. No. 41 <br />
+          Section: C
+        </p>
+      </section>
+      <section class="ft" id="jaskaran">
+        <h2>Jaskaran Reen</h2>
+        <p>
+          201800536 <br />
+          Roll. No. 44 <br />
+          Section: C
+        </p>
+      </section>
+      <section class="ft" id="prajakta">
+        <h2>Prajakta Ghorpade</h2>
+        <p>
+          201800541 <br />
+          Roll. No. 45 <br />
+          Section: C
+        </p>
+      </section>
+      <section class="ft" id="lush">
+        <h2>Lush Gulati</h2>
+        <p>
+          201800609 <br />
+          Roll. No. 55 <br />
+          Section: C
+        </p>
+      </section>
+    </footer>
+  </body>
+</html>

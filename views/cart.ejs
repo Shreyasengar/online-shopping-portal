@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Online Shopping Portal </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="imgs/logo.png">
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Varela+Round&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/cart.css">
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+</head>
+<body>
+
+	<header>
+		<div class="hleft">
+			<i class="fa fa-shopping-cart" style="font-size:120px;color:#056676"></i>
+		</div>
+		<div class="hright">
+	    	<h1> Shopping Cart</h1>
+			<h3> Hop n Shop - Online Shopping Portal </h3>
+		</div>
+		<div class="hrest">
+			<marquee> Upto 45% off on electronics from 10th November to 13th November &nbsp; * &nbsp; Latest Clothing Fashion Available for Diwali &nbsp; * &nbsp; Over 10,000 new E-books available for you!</marquee>
+		</div>
+	</header>
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+			    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				    <span class="sr-only">Toggle navigation</span>
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+			    </button>
+		    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	    	<ul class="nav navbar-nav">
+		        <li><a href="index">Home <span class="sr-only">(current)</span></a></li>
+		        <li><a href="electronics">Electronics</a></li>
+			    <li><a href="clothing">Clothing</a></li>
+		        <li><a href="ebooks">E-books</a></li>
+	        </ul>
+
+		    <ul class="nav navbar-nav navbar-right">
+			    <li><a href="#" class="active"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+			    <li><a href="/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			    <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+		 	</ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<div class="abc"></div>
+
+	<table class="bill" align="center" >
+		<thead>
+			<tr>
+				<th> Product ID </th>
+				<th> Product Name </th>
+				<th> Quantity </th>
+				<th> Price </th>
+			</tr>
+		</thead>
+		<tbody>
+			<% for (var i=0; i<item_id.length; i++){ %> 
+			<tr>
+				<td><%= item_id[i] %></td>
+				<td><%= item_name[i] %> </td>
+				<td class="quantity"><%= quantity[i] %> </td>
+				<td> &#8377; <%= cost[i] %>  <span class="price"></span> </td>
+			</tr>
+			
+		<% } %>
+		<tr class="subtotal">
+			<th colspan="3"> SUBTOTAL </th>
+			<th> &#8377; <%= subtotal %>  <span class="subtotal_amt"></span> </th>
+		</tr> 
+		</tbody>
+	</table>
+	<center><a href="checkout"><button class="checkout">Proceed to Checkout!</button></a></center>
+	<footer>
+		<section class="ft" id="shreya">
+			<h2> Shreya Sengar </h2>
+			<p> 201800510 <br> Roll. No. 41 <br> Section: C </p>
+		</section>
+		<section class="ft" id="jaskaran">
+			<h2> Jaskaran Reen </h2>
+			<p> 201800536 <br> Roll. No. 44 <br> Section: C </p>
+		</section>
+		<section class="ft" id="prajakta">
+			<h2> Prajakta Ghorpade </h2>
+			<p> 201800541 <br> Roll. No. 45 <br> Section: C </p>
+		</section>
+		<section class="ft" id="lush">
+			<h2> Lush Gulati </h2>
+			<p> 201800609 <br> Roll. No. 55 <br> Section: C </p>
+		</section>
+	</footer>
+
+
+</body>
+</html>
